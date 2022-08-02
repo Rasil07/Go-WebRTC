@@ -44,7 +44,10 @@ func (cR *ChatRoutes) Setup(){
 			break
 		}
 		if string(message) == "ping"{
-			message = []byte("pong pong")
+			message = []byte("pong ping")
+		}
+		if string(message) == "ding"{
+			message = []byte("dong dong")
 		}
 
 		err = ws.WriteMessage(mt, message)
